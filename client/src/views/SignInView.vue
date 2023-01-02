@@ -11,4 +11,4 @@ export default defineComponent({
     </div>
 </template>
 
-<style scoped></style>
+<style scoped lang="scss" src="../styles/views/signin.module.scss"></style>

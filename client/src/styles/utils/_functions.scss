@@ -1,0 +1,6 @@
+@use "./variables" as *;
+@use "./constants" as *;
+
+@function get-color($color, $shade) {
+    @return var(--clr-#{$color}-#{$shade});
+}
