@@ -1,7 +1,10 @@
 <script setup lang="ts"></script>
 
 <template>
-    <RouterView />
+    <!-- <RouterView /> -->
+    <h1 id="a">hello</h1>
 </template>
 
-<style scoped></style>
+<style scoped lang="scss">
+@import "./styles/base/reset.scss";
+</style>
