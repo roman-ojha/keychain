@@ -68,10 +68,15 @@
             justify-content: center;
             align-items: center;
             gap: 3rem;
-            &__sign-in-buttons {
+            &__sign-in-with-buttons {
                 width: 30%;
                 height: 300px;
                 border: 1px solid pink;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                gap: 20px;
             }
         }
     }

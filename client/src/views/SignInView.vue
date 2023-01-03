@@ -2,16 +2,23 @@
 import { defineComponent } from "vue";
 import logo from "../assets/img/appIcon.png";
 import FormVue from "../components/SignIn/Form.vue";
+import SignInWithButton from "../components/SignIn/SignInWithButton.vue";
+import GoogleIcon from "../assets/ico/google.png";
+import FacebookIcon from "../assets/ico/facebook.png";
+
 export default defineComponent({
     name: "SignInView",
     data() {
         return {
             logo,
             name: "roman",
+            googleIcon: GoogleIcon,
+            facebookIcon: FacebookIcon,
         };
     },
     components: {
         FormVue,
+        SignInWithButton,
     },
 });
 </script>
@@ -35,7 +42,16 @@ export default defineComponent({
             </div>
             <div class="main__forms-container">
                 <FormVue />
-                <div class="main__forms-container__sign-in-buttons"></div>
+                <div class="main__forms-container__sign-in-with-buttons">
+                    <SignInWithButton
+                        signInWith="Google"
+                        :logoSrc="googleIcon"
+                    />
+                    <SignInWithButton
+                        signInWith="Facebook"
+                        :logoSrc="facebookIcon"
+                    />
+                </div>
             </div>
         </main>
     </div>
