@@ -10,8 +10,6 @@
     flex-direction: column;
     justify-content: space-evenly;
     align-items: center;
-    @mixin input-field {
-    }
     input[name="email"],
     input[name="password"] {
         width: 80%;
@@ -29,6 +27,9 @@
         &:read-write {
             outline: none;
             font-size: 1rem;
+        }
+        @include mq("xxls", $max-width: true, $min-width: true) {
+            padding: 0.6rem;
         }
     }
     &__sign-in-button {
@@ -51,6 +52,10 @@
                 $amount: 15
             );
         }
+        @include mq("xxls", $max-width: true, $min-width: true) {
+            height: 50px;
+            font-size: 1.3rem;
+        }
     }
     &__create-account-button {
         width: 60%;
@@ -69,6 +74,10 @@
         &:hover {
             background-color: adjust-hue(get-color("secondary", 700, false), 5);
         }
+        @include mq("xxls", $max-width: true, $min-width: true) {
+            height: 50px;
+            font-size: 0.8rem;
+        }
     }
     &__forget-password {
         text-decoration: none;
@@ -78,6 +87,9 @@
         letter-spacing: 2.5px;
         &:hover {
             text-decoration: underline;
+        }
+        @include mq("xxls", $max-width: true, $min-width: true) {
+            font-size: 0.8rem;
         }
     }
 }
