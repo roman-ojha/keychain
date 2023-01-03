@@ -22,4 +22,6 @@ export default defineComponent({
     </button>
 </template>
 
-<style scoped></style>
+<style scoped lang="scss">
+@import "../../styles/components/signin/signInWithButton.module.scss";
+</style>

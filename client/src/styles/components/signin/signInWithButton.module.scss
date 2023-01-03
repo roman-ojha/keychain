@@ -1,0 +1,32 @@
+@use "../../utils" as *;
+
+.sign-in-with-button {
+    background-color: lighten(
+        $color: get-color("secondary", 700, false),
+        $amount: 15
+    );
+    border-width: 0px;
+    cursor: pointer;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 270px;
+    padding: 0.3rem 0.8rem;
+    border-radius: 7px;
+    transition-duration: 300ms;
+    &:hover {
+        background-color: lighten(
+            $color: get-color("secondary", 700, false),
+            $amount: 10
+        );
+    }
+    img {
+        width: 2rem;
+    }
+    p {
+        margin-left: 0.4rem;
+        font-family: get-font("primary");
+        font-size: 0.8rem;
+        letter-spacing: 2px;
+    }
+}
