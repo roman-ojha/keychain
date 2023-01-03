@@ -1,8 +1,15 @@
 @use "./variables" as *;
 @use "./constants" as *;
 
-@function get-color($color, $shade) {
-    @return var(--clr-#{$color}-#{$shade});
+@function get-color($color, $shade, $variable: true) {
+    @if $variable == true {
+        @return var(--clr-#{$color}-#{$shade});
+    } @else {
+        @return map-get(
+            $map: map-get($map: $colors, $key: $color),
+            $key: $shade
+        );
+    }
 }
 
 @function get-font($font) {

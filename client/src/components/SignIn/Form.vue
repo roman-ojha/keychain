@@ -6,7 +6,21 @@ export default defineComponent({
 </script>
 
 <template>
-    <div class="form-container"></div>
+    <div class="form-container">
+        <input type="text" placeholder="Email Address" name="email" />
+        <input type="text" placeholder="Password" name="password" />
+        <input
+            type="submit"
+            value="Sign In"
+            class="form-container__sign-in-button"
+        />
+        <input
+            type="button"
+            value="Create New Account"
+            class="form-container__create-account-button"
+        />
+        <a href="" class="form-container__forget-password">Forget Password?</a>
+    </div>
 </template>
 
 <style scoped lang="scss">

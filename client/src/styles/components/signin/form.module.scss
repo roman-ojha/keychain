@@ -1,9 +1,83 @@
 @use "../../utils" as *;
 
 .form-container {
-    width: 350px;
+    width: 25%;
     height: 90%;
     background-color: white;
-    border: 1px solid black;
+    box-shadow: 0px 0px 10px rgb(191 191 191);
     border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    @mixin input-field {
+    }
+    input[name="email"],
+    input[name="password"] {
+        width: 80%;
+        padding: 0.55rem;
+        box-sizing: border-box;
+        border-radius: 5px;
+        border-width: 1px;
+        border-color: rgb(190, 190, 190);
+        border-style: solid;
+        &::placeholder {
+            font-family: get-font("primary");
+            color: black;
+            letter-spacing: 1.5px;
+        }
+        &:read-write {
+            outline: none;
+            font-size: 1rem;
+        }
+    }
+    &__sign-in-button {
+        width: 80%;
+        height: 40px;
+        box-sizing: border-box;
+        background-color: get-color("primary", 900);
+        border-width: 0px;
+        cursor: pointer;
+        font-family: get-font("primary");
+        font-size: 1.2rem;
+        letter-spacing: 3px;
+        font-weight: 600;
+        color: white;
+        border-radius: 25px;
+        transition-duration: 300ms;
+        &:hover {
+            background-color: saturate(
+                $color: get-color("primary", 900, false),
+                $amount: 15
+            );
+        }
+    }
+    &__create-account-button {
+        width: 60%;
+        height: 40px;
+        box-sizing: border-box;
+        background-color: get-color("secondary", 700);
+        border-width: 0px;
+        cursor: pointer;
+        font-family: get-font("primary");
+        font-size: 0.7rem;
+        letter-spacing: 1px;
+        font-weight: 400;
+        color: black;
+        border-radius: 25px;
+        transition-duration: 300ms;
+        &:hover {
+            background-color: adjust-hue(get-color("secondary", 700, false), 5);
+        }
+    }
+    &__forget-password {
+        text-decoration: none;
+        font-family: get-font("primary");
+        color: get-color("primary", 800);
+        font-size: 0.7rem;
+        letter-spacing: 2.5px;
+        &:hover {
+            text-decoration: underline;
+        }
+    }
 }
