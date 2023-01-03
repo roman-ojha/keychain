@@ -19,7 +19,11 @@ export default defineComponent({
         </div>
         <main class="main">
             <div class="main__logo-title">
-                <img class="main__logo-title__logo" :src="logo" />
+                <img
+                    class="main__logo-title__logo"
+                    :src="logo"
+                    alt="app-logo"
+                />
                 <h1>KeyChain</h1>
             </div>
             <div class="main__sign-in">
