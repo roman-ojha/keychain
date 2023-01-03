@@ -16,11 +16,38 @@
         &__round-shape {
             $size: 90vw;
             position: relative;
-            bottom: calc(-#{$size} / 4);
+            bottom: calc(-#{$size} / 4.5);
             width: $size;
             height: $size;
             background-color: get-color("primary", 900);
             border-radius: 50%;
+        }
+    }
+    .main {
+        width: 100%;
+        height: 100vh;
+        overflow: hidden;
+        &__logo-title {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            &__logo {
+                width: 4rem;
+                @include mq("xxls", $max-width: true, $min-width: true) {
+                    width: 4.5rem;
+                }
+            }
+            h1 {
+                font-family: get-font("primary");
+                color: rgb(43, 43, 43);
+                letter-spacing: 4px;
+                font-size: 1.5rem;
+                @include mq("xxls", $max-width: true, $min-width: true) {
+                    font-size: 1.6rem;
+                }
+            }
         }
     }
 }
