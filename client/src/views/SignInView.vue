@@ -1,6 +1,7 @@
 <script lang="ts">
 import { defineComponent } from "vue";
 import logo from "../assets/img/appIcon.png";
+import FormVue from "../components/SignIn/Form.vue";
 export default defineComponent({
     name: "SignInView",
     data() {
@@ -8,6 +9,9 @@ export default defineComponent({
             logo,
             name: "roman",
         };
+    },
+    components: {
+        FormVue,
     },
 });
 </script>
@@ -29,7 +33,10 @@ export default defineComponent({
             <div class="main__sign-in">
                 <h2>Sign In</h2>
             </div>
-            <div class="main__form-container"></div>
+            <div class="main__forms-container">
+                <FormVue />
+                <div class="main__forms-container__sign-in-buttons"></div>
+            </div>
         </main>
     </div>
 </template>
