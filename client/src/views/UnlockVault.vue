@@ -1,12 +1,12 @@
 <script lang="ts">
 import { defineComponent } from "vue";
-import logo from "../assets/img/appIcon.png";
+import appIcon from "../assets/ico/appIcon.png";
 import FormVue from "@/components/UnlockVault/Form.vue";
 export default defineComponent({
     name: "UnlockVault",
     data() {
         return {
-            logo,
+            appIcon,
         };
     },
     components: {
@@ -24,7 +24,7 @@ export default defineComponent({
             <div class="main__logo-title">
                 <img
                     class="main__logo-title__logo"
-                    :src="logo"
+                    :src="appIcon"
                     alt="app-logo"
                 />
                 <h1>KeyChain</h1>

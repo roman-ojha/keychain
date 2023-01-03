@@ -1,6 +1,6 @@
 <script lang="ts">
 import { defineComponent } from "vue";
-import logo from "../assets/img/appIcon.png";
+import appIcon from "../assets/ico/appIcon.png";
 import FormVue from "../components/SignIn/Form.vue";
 import SignInWithButton from "../components/SignIn/SignInWithButton.vue";
 import GoogleIcon from "../assets/ico/google.png";
@@ -10,7 +10,7 @@ export default defineComponent({
     name: "SignInView",
     data() {
         return {
-            logo,
+            appIcon,
             name: "roman",
             googleIcon: GoogleIcon,
             facebookIcon: FacebookIcon,
@@ -32,7 +32,7 @@ export default defineComponent({
             <div class="main__logo-title">
                 <img
                     class="main__logo-title__logo"
-                    :src="logo"
+                    :src="appIcon"
                     alt="app-logo"
                 />
                 <h1>KeyChain</h1>

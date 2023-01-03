@@ -1,7 +1,7 @@
 <script lang="ts">
 import { defineComponent } from "vue";
 import FormVue from "../components/CreateMasterPW/Form.vue";
-import appIcon from "../assets/img/appIcon.png";
+import appIcon from "../assets/ico/appIcon.png";
 export default defineComponent({
     name: "CreateMasterPW",
     data() {

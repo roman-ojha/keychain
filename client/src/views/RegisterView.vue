@@ -1,6 +1,6 @@
 <script lang="ts">
 import { defineComponent } from "vue";
-import appIcon from "../assets/img/appIcon.png";
+import appIcon from "../assets/ico/appIcon.png";
 import FormVue from "../components/Register/Form.vue";
 export default defineComponent({
     name: "RegisterView",

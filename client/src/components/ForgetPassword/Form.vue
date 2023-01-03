@@ -8,7 +8,7 @@ export default defineComponent({
 <template>
     <form action="" class="form">
         <p class="form__desc">
-            Enter your email address to get verification code to reset password
+            Enter your email address to get verification code for reset password
         </p>
         <input
             type="email"
