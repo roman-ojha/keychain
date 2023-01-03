@@ -6,6 +6,7 @@ import VaultView from "../views/VaultView.vue";
 import UnlockVault from "../views/UnlockVault.vue";
 import CreateMasterPW from "../views/CreateMasterPW.vue";
 import ForgetPassword from "../views/ForgetPassword.vue";
+import ResetPassword from "../views/ResetPassword.vue";
 
 const router = createRouter({
     history: createWebHistory(import.meta.env.BASE_URL),
@@ -44,6 +45,11 @@ const router = createRouter({
             path: "/forget-password",
             name: "forget-password",
             component: ForgetPassword,
+        },
+        {
+            path: "/reset-password",
+            name: "reset-password",
+            component: ResetPassword,
         },
     ],
 });

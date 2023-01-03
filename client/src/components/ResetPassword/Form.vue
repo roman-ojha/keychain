@@ -7,19 +7,23 @@ export default defineComponent({
 
 <template>
     <form action="" class="form">
-        <p class="form__desc">
-            Enter your email address to get verification code to reset password
-        </p>
+        <p class="form__desc">Reset your password</p>
         <input
-            type="email"
-            name="email"
-            id="email"
-            placeholder="Email Address"
+            type="password"
+            name="password"
+            id="password"
+            placeholder="Password"
         />
-        <input type="submit" value="Send" class="form__unlock-btn" />
+        <input
+            type="password"
+            name="password_confirmation"
+            id="password_confirmation"
+            placeholder="Confirm Password"
+        />
+        <input type="submit" value="Reset" class="form__unlock-btn" />
     </form>
 </template>
 
 <style scoped lang="scss">
-@import "../../styles/components/forgetPassword/form.module.scss";
+@import "../../styles/components/resetPassword/form.module.scss";
 </style>

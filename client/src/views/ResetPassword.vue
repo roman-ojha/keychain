@@ -1,7 +1,7 @@
 <script lang="ts">
 import { defineComponent } from "vue";
 import logo from "../assets/img/appIcon.png";
-import FormVue from "@/components/ForgetPassword/Form.vue";
+import FormVue from "@/components/ResetPassword/Form.vue";
 export default defineComponent({
     name: "UnlockVault",
     data() {
@@ -35,5 +35,5 @@ export default defineComponent({
 </template>
 
 <style scoped lang="scss">
-@import "../styles/views/forgetPassword.module.scss";
+@import "../styles/views/resetPassword.module.scss";
 </style>
