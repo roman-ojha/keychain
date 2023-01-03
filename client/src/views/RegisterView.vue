@@ -46,12 +46,23 @@ export default defineComponent({
                         <h1>Birthday</h1>
                     </div>
                     <div class="form__gender">
-                        <div class="form__gender__male"></div>
-                        <div class="form__gender__female"></div>
-                        <div class="form__gender__others"></div>
+                        <div class="form__gender__male">
+                            <p>Male</p>
+                            <input type="checkbox" name="male" />
+                        </div>
+                        <div class="form__gender__female">
+                            <p>Female</p>
+                            <input type="checkbox" name="female" />
+                        </div>
+                        <div class="form__gender__others">
+                            <p>Others</p>
+                            <input type="checkbox" name="others" />
+                        </div>
                     </div>
-                    <input type="submit" value="Sign Up" />
-                    <RouterLink to="/signin">Sign In</RouterLink>
+                    <div class="form__buttons">
+                        <input type="submit" value="Sign Up" />
+                        <RouterLink to="/signin">Sign In</RouterLink>
+                    </div>
                 </form>
             </div>
         </main>
