@@ -43,25 +43,46 @@ export default defineComponent({
                         placeholder="Confirm Password"
                     />
                     <div class="form__birthday">
-                        <h1>Birthday</h1>
+                        <label>Birthday</label>
                     </div>
                     <div class="form__gender">
-                        <div class="form__gender__male">
-                            <p>Male</p>
-                            <input type="checkbox" name="male" />
+                        <div class="form__gender__child">
+                            <label for="male">Male</label>
+                            <input
+                                type="checkbox"
+                                id="male"
+                                name="male"
+                                value="male"
+                            />
                         </div>
-                        <div class="form__gender__female">
-                            <p>Female</p>
-                            <input type="checkbox" name="female" />
+                        <div class="form__gender__child">
+                            <label for="female">Female</label>
+                            <input
+                                type="checkbox"
+                                id="female"
+                                name="female"
+                                value="male"
+                            />
                         </div>
-                        <div class="form__gender__others">
-                            <p>Others</p>
-                            <input type="checkbox" name="others" />
+                        <div class="form__gender__child">
+                            <label for="others">Others</label>
+                            <input
+                                type="checkbox"
+                                id="others"
+                                name="others"
+                                value="male"
+                            />
                         </div>
                     </div>
                     <div class="form__buttons">
-                        <input type="submit" value="Sign Up" />
-                        <RouterLink to="/signin">Sign In</RouterLink>
+                        <input
+                            type="submit"
+                            value="Sign Up"
+                            class="form__buttons__sign-up"
+                        />
+                        <RouterLink to="/signin" class="form__buttons__sign-in"
+                            >Sign In</RouterLink
+                        >
                     </div>
                 </form>
             </div>

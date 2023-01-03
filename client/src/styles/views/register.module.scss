@@ -73,7 +73,10 @@
                 }
             }
             .form {
-                border: 1px solid red;
+                $children-width: 80%;
+                border: 1px solid rgb(206, 206, 206);
+                border-radius: 15px;
+                box-shadow: 0px 0px 10px #c5c5c5;
                 width: 50%;
                 height: 80%;
                 box-sizing: border-box;
@@ -85,7 +88,7 @@
                 input[name="email"],
                 input[name="password"],
                 input[name="password_confirmation"] {
-                    width: 80%;
+                    width: $children-width;
                     padding: 0.55rem;
                     box-sizing: border-box;
                     border-radius: 5px;
@@ -103,6 +106,65 @@
                     }
                     @include mq("xxls", $max-width: true, $min-width: true) {
                         padding: 0.6rem;
+                    }
+                }
+                &__birthday {
+                    width: $children-width;
+                    display: flex;
+                    justify-content: flex-start;
+                    align-items: center;
+                    letter-spacing: 1px;
+                    label {
+                        font-size: 1rem;
+                        font-family: get-font("primary");
+                    }
+                }
+                &__gender {
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    width: $children-width;
+                    &__child {
+                        display: flex;
+                        justify-content: space-between;
+                        align-items: center;
+                        gap: 0.7rem;
+                        border: 1px solid rgb(119, 119, 119);
+                        padding: 0.3rem 0.8rem;
+                        border-radius: 5px;
+                        cursor: pointer;
+                        label {
+                            font-family: get-font("primary");
+                            cursor: pointer;
+                        }
+                    }
+                }
+                &__buttons {
+                    width: $children-width;
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    box-sizing: border-box;
+                    padding: 0px 0.5rem;
+                    &__sign-up {
+                        background-color: get-color("primary", 900);
+                        border-width: 0px;
+                        padding: 0.5rem 1rem;
+                        font-size: 1.2rem;
+                        font-weight: 600;
+                        color: white;
+                        letter-spacing: 3px;
+                        border-radius: 10px;
+                        font-family: get-font("primary");
+                        cursor: pointer;
+                    }
+                    &__sign-in {
+                        text-decoration: none;
+                        color: black;
+                        font-size: 1.2rem;
+                        font-weight: 600;
+                        letter-spacing: 3px;
+                        font-family: get-font("primary");
                     }
                 }
             }
