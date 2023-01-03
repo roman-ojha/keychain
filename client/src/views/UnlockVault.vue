@@ -26,17 +26,17 @@ export default defineComponent({
                 <h1>KeyChain</h1>
             </div>
             <form action="" class="form">
-                <p class="form_desc">
-                    Enter you master password to unlock vault
+                <p class="form__desc">
+                    Enter your master password to unlock vault
                 </p>
                 <input
                     type="password"
-                    name="password"
-                    id="password"
+                    name="master_password"
+                    id="master_password"
                     placeholder="Master Password"
                 />
                 <input type="submit" value="Unlock" class="form__unlock-btn" />
-                <button class="form__logout-btn">Log out</button>
+                <button class="form__logout-btn" type="button">Log out</button>
             </form>
         </main>
     </div>

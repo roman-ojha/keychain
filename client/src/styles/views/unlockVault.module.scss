@@ -27,12 +27,17 @@
         width: 100%;
         height: 100vh;
         overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
         &__logo-title {
             width: 100%;
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
+            margin-top: 4vh;
             &__logo {
                 width: 4rem;
                 @include mq("xxls", $max-width: true, $min-width: true) {
@@ -46,6 +51,102 @@
                 font-size: 1.5rem;
                 @include mq("xxls", $max-width: true, $min-width: true) {
                     font-size: 1.6rem;
+                }
+            }
+        }
+        .form {
+            width: 27%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+            align-items: center;
+            height: 40%;
+            background-color: white;
+            margin-bottom: 3vh;
+            box-shadow: 0px 0px 10px rgb(191 191 191);
+            border-radius: 10px;
+            &__desc {
+                font-family: get-font("primary");
+                font-size: 1rem;
+                font-weight: 500;
+                width: 60%;
+                text-align: center;
+            }
+            input[name="master_password"] {
+                width: 80%;
+                padding: 0.55rem;
+                box-sizing: border-box;
+                border-radius: 5px;
+                border-width: 1px;
+                border-color: rgb(190, 190, 190);
+                border-style: solid;
+                &::placeholder {
+                    font-family: get-font("primary");
+                    color: black;
+                    letter-spacing: 1.5px;
+                    text-align: center;
+                }
+                &:read-write {
+                    outline: none;
+                    font-size: 1rem;
+                    text-align: center;
+                }
+                @include mq("xxls", $max-width: true, $min-width: true) {
+                    padding: 0.6rem;
+                }
+            }
+            &__unlock-btn {
+                width: 80%;
+                height: 40px;
+                box-sizing: border-box;
+                background-color: get-color("primary", 900);
+                border-width: 0px;
+                cursor: pointer;
+                font-family: get-font("primary");
+                font-size: 1.2rem;
+                letter-spacing: 3px;
+                font-weight: 600;
+                color: white;
+                border-radius: 25px;
+                transition-duration: 300ms;
+                &:hover {
+                    background-color: saturate(
+                        $color: get-color("primary", 900, false),
+                        $amount: 15
+                    );
+                }
+                @include mq("xxls", $max-width: true, $min-width: true) {
+                    height: 50px;
+                    font-size: 1.3rem;
+                }
+            }
+            &__logout-btn {
+                width: 60%;
+                height: 40px;
+                box-sizing: border-box;
+                background-color: get-color("secondary", 700);
+                border-width: 0px;
+                cursor: pointer;
+                font-family: get-font("primary");
+                font-size: 0.8rem;
+                letter-spacing: 1px;
+                font-weight: 400;
+                color: black;
+                border-radius: 25px;
+                transition-duration: 300ms;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                text-decoration: none;
+                &:hover {
+                    background-color: adjust-hue(
+                        get-color("secondary", 700, false),
+                        5
+                    );
+                }
+                @include mq("xxls", $max-width: true, $min-width: true) {
+                    height: 50px;
+                    font-size: 0.9rem;
                 }
             }
         }
