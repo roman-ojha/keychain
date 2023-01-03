@@ -5,6 +5,7 @@ import RegisterView from "../views/RegisterView.vue";
 import VaultView from "../views/VaultView.vue";
 import UnlockVault from "../views/UnlockVault.vue";
 import CreateMasterPW from "../views/CreateMasterPW.vue";
+import ForgetPassword from "../views/ForgetPassword.vue";
 
 const router = createRouter({
     history: createWebHistory(import.meta.env.BASE_URL),
@@ -31,13 +32,18 @@ const router = createRouter({
         },
         {
             path: "/vault/unlock",
-            name: "vaultUnlock",
+            name: "vault-unlock",
             component: UnlockVault,
         },
         {
             path: "/vault/create-master-password",
-            name: "create",
+            name: "create-master-password",
             component: CreateMasterPW,
+        },
+        {
+            path: "/forget-password",
+            name: "forget-password",
+            component: ForgetPassword,
         },
     ],
 });
