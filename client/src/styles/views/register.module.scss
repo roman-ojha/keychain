@@ -1,0 +1,27 @@
+@use "../utils" as *;
+
+.container {
+    width: 100%;
+    height: 100vh;
+    .background-container {
+        width: 100%;
+        height: 100vh;
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        overflow: hidden;
+        z-index: -1;
+        display: flex;
+        justify-content: start;
+        align-items: center;
+        &__round-shape {
+            $size: 90vw;
+            position: relative;
+            left: calc(-#{$size} / 1.5);
+            width: $size;
+            height: $size;
+            background-color: get-color("primary", 900);
+            border-radius: 50%;
+        }
+    }
+}

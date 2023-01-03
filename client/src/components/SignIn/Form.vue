@@ -14,11 +14,13 @@ export default defineComponent({
             value="Sign In"
             class="form-container__sign-in-button"
         />
-        <input
+        <RouterLink
             type="button"
             value="Create New Account"
             class="form-container__create-account-button"
-        />
+            to="/register"
+            >Create New Account</RouterLink
+        >
         <a href="" class="form-container__forget-password">Forget Password?</a>
     </div>
 </template>

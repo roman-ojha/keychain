@@ -71,6 +71,10 @@
         color: black;
         border-radius: 25px;
         transition-duration: 300ms;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-decoration: none;
         &:hover {
             background-color: adjust-hue(get-color("secondary", 700, false), 5);
         }
