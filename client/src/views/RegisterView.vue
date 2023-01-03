@@ -1,12 +1,18 @@
 <script lang="ts">
 import { defineComponent } from "vue";
 import appIcon from "../assets/img/appIcon.png";
+import "@vuepic/vue-datepicker/src/VueDatePicker/style/main.scss";
+import { Icon } from "@iconify/vue";
 export default defineComponent({
     name: "RegisterView",
     data() {
         return {
             appIcon,
+            date: new Date(),
         };
+    },
+    components: {
+        Icon,
     },
 });
 </script>
@@ -43,7 +49,18 @@ export default defineComponent({
                         placeholder="Confirm Password"
                     />
                     <div class="form__birthday">
-                        <label>Birthday</label>
+                        <label for="birthday">Birthday</label>
+                        <DatePicker
+                            v-model="date"
+                            id="birthday"
+                            class="form__birthday__picker"
+                            :enable-time-picker="false"
+                            :max-date="new Date()"
+                            :year-range="[
+                                new Date().getFullYear() - 100,
+                                new Date().getFullYear(),
+                            ]"
+                        ></DatePicker>
                     </div>
                     <div class="form__gender">
                         <div class="form__gender__child">
@@ -51,7 +68,7 @@ export default defineComponent({
                             <input
                                 type="checkbox"
                                 id="male"
-                                name="male"
+                                name="gender"
                                 value="male"
                             />
                         </div>
@@ -60,8 +77,8 @@ export default defineComponent({
                             <input
                                 type="checkbox"
                                 id="female"
-                                name="female"
-                                value="male"
+                                name="gender"
+                                value="female"
                             />
                         </div>
                         <div class="form__gender__child">
@@ -69,8 +86,8 @@ export default defineComponent({
                             <input
                                 type="checkbox"
                                 id="others"
-                                name="others"
-                                value="male"
+                                name="gender"
+                                value="others"
                             />
                         </div>
                     </div>
@@ -81,8 +98,12 @@ export default defineComponent({
                             class="form__buttons__sign-up"
                         />
                         <RouterLink to="/signin" class="form__buttons__sign-in"
-                            >Sign In</RouterLink
-                        >
+                            >Sign In
+                            <Icon
+                                icon="ic:outline-keyboard-double-arrow-right"
+                                color="black"
+                            />
+                        </RouterLink>
                     </div>
                 </form>
             </div>
