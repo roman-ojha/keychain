@@ -30,6 +30,13 @@ export default defineComponent({
                 <h1>KeyChain</h1>
             </div>
             <FormVue />
+            <div class="main__disclaimer">
+                <h2>Warning!!!</h2>
+                <p>
+                    Never forget you Master Password, If you forget it you won't
+                    be able to reset master password & unlock your vault.
+                </p>
+            </div>
         </main>
     </div>
 </template>

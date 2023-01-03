@@ -7,7 +7,7 @@ export default defineComponent({
 
 <template>
     <form action="" class="form">
-        <p class="form__desc">Enter your master password to unlock vault</p>
+        <p class="form__desc">Enter your Master Password to unlock vault</p>
         <input
             type="password"
             name="master_password"

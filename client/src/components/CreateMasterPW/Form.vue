@@ -7,15 +7,14 @@ export default defineComponent({
 
 <template>
     <form action="" class="form">
-        <p class="form__desc">Enter your master password to unlock vault</p>
+        <p class="form__desc">Enter Master Password to create your vault</p>
         <input
             type="password"
             name="master_password"
             id="master_password"
             placeholder="Master Password"
         />
-        <input type="submit" value="Unlock" class="form__unlock-btn" />
-        <button class="form__logout-btn" type="button">Log out</button>
+        <input type="submit" value="Create" class="form__unlock-btn" />
     </form>
 </template>
 
