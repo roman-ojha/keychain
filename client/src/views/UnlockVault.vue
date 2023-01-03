@@ -1,12 +1,16 @@
 <script lang="ts">
 import { defineComponent } from "vue";
 import logo from "../assets/img/appIcon.png";
+import FormVue from "@/components/UnlockVault/Form.vue";
 export default defineComponent({
     name: "UnlockVault",
     data() {
         return {
             logo,
         };
+    },
+    components: {
+        FormVue,
     },
 });
 </script>
@@ -25,19 +29,7 @@ export default defineComponent({
                 />
                 <h1>KeyChain</h1>
             </div>
-            <form action="" class="form">
-                <p class="form__desc">
-                    Enter your master password to unlock vault
-                </p>
-                <input
-                    type="password"
-                    name="master_password"
-                    id="master_password"
-                    placeholder="Master Password"
-                />
-                <input type="submit" value="Unlock" class="form__unlock-btn" />
-                <button class="form__logout-btn" type="button">Log out</button>
-            </form>
+            <FormVue />
         </main>
     </div>
 </template>
