@@ -40,27 +40,35 @@ export default defineComponent({
             ></DatePicker>
         </div>
         <div class="form__gender">
-            <div class="form__gender__child">
-                <label for="male">Male</label>
-                <input type="checkbox" id="male" name="gender" value="male" />
-            </div>
-            <div class="form__gender__child">
-                <label for="female">Female</label>
-                <input
-                    type="checkbox"
-                    id="female"
-                    name="gender"
-                    value="female"
-                />
-            </div>
-            <div class="form__gender__child">
-                <label for="others">Others</label>
-                <input
-                    type="checkbox"
-                    id="others"
-                    name="gender"
-                    value="others"
-                />
+            <p>Gender</p>
+            <div class="form__gender__picker">
+                <div class="form__gender__picker__child">
+                    <label for="male">Male</label>
+                    <input
+                        type="checkbox"
+                        id="male"
+                        name="gender"
+                        value="male"
+                    />
+                </div>
+                <div class="form__gender__picker__child">
+                    <label for="female">Female</label>
+                    <input
+                        type="checkbox"
+                        id="female"
+                        name="gender"
+                        value="female"
+                    />
+                </div>
+                <div class="form__gender__picker__child">
+                    <label for="others">Others</label>
+                    <input
+                        type="checkbox"
+                        id="others"
+                        name="gender"
+                        value="others"
+                    />
+                </div>
             </div>
         </div>
         <div class="form__buttons">
